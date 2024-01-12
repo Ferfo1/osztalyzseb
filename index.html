@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="icon" type="image/gif" href="images/favicon.gif">
+    <title>OsztályZseb</title>
+</head>
+<body>
+
+    <div class="container" id="appContainer">
+        <div id="loginForm">
+            <h2>Bejelentkezés</h2>
+            <label for="username">Felhasználónév:</label>
+            <input type="text" id="username">
+
+            <label for="password">Jelszó:</label>
+            <input type="password" id="password">
+
+            <button onclick="login()">Bejelentkezés</button>
+            <a href="register.html">
+                <button>Regisztrálok Most!</button>
+              </a>
+              
+        </div>
+
+        <div id="appContent" style="display:none;">
+            <label for="name">Név:</label>
+            <input type="text" id="name">
+
+            <label for="balance">Egyenleg:</label>
+            <input type="text" id="balance">
+
+            <button onclick="addStudent()">Tanuló hozzáadása</button>
+            <button onclick="deleteStudent()">Tanuló törlése</button>
+            <button onclick="saveStudents()">Tanulók mentése</button>
+            <button onclick="loadStudents()">Tanulók betöltése</button>
+
+            <p id="totalBalance">Összes egyenleg: 0</p>
+
+            <select id="studentsList" size="15"></select>
+
+            <label for="moneyAction">Összeg:</label>
+            <input type="text" id="moneyAction">
+
+            <button onclick="withdrawMoney()">Pénz kivonása</button>
+            <button onclick="addMoney()">Pénz hozzáadása</button>
+            <button onclick="withdrawMoneyFromAll()">Pénz kivonása mindenkitől</button>
+            <button onclick="addMoneyToAll()">Pénz hozzáadása mindenkihez</button>
+        </div>
+    </div>
+    
+
+    <script src="app.js"></script>
+</body>
+</html>
